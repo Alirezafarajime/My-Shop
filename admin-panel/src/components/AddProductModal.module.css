@@ -1,0 +1,80 @@
+.modalPaper :global(.MuiPaper-root) {
+  border-radius: 24px !important;
+  padding: 10px;
+}
+
+.dialogTitle {
+  font-family: inherit !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 10px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 10px !important;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #302f2f;
+  text-align: right;
+}
+
+.customInput :global(.MuiOutlinedInput-root) {
+  background-color: #f3f4f6 !important;
+  border-radius: 12px !important;
+  font-family: inherit !important;
+}
+
+.customInput :global(.MuiOutlinedInput-notchedOutline) {
+  border: none !important;
+}
+
+.customInput input {
+  text-align: right;
+  padding: 12px !important;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 24px !important;
+}
+
+.createBtn {
+  background-color: #3b82f6 !important;
+  color: white !important;
+  border-radius: 12px !important;
+  font-family: inherit !important;
+  flex: 1;
+  padding: 12px 0 !important;
+}
+
+.createBtn:hover {
+  background-color: #2563eb !important;
+}
+
+.cancelBtn {
+  background-color: #d2d4da !important;
+  color: #343f4f !important;
+  border-radius: 12px !important;
+  font-family: inherit !important;
+  flex: 1;
+  padding: 12px 0 !important;
+}
+
+.cancelBtn:hover {
+  background-color: #d1d5db !important;
+}

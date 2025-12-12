@@ -1,0 +1,83 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: white;
+  font-family: inherit;
+  padding: 20px 0;
+}
+
+.headerText {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #242424;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.customInput :global(.MuiOutlinedInput-root) {
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  font-family: inherit;
+}
+
+.customInput :global(.MuiOutlinedInput-notchedOutline) {
+  border: none;
+}
+
+.customInput :global(.MuiOutlinedInput-root.Mui-focused) {
+  background-color: #e5e7eb;
+  box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+.submitButton {
+  border-radius: 12px !important;
+  padding: 12px !important;
+  font-size: 1rem !important;
+  box-shadow: none !important;
+  background-color: #3b82f6 !important;
+  font-family: inherit !important;
+}
+
+.submitButton:hover {
+  background-color: #2563eb !important;
+}
+
+.linkText {
+  font-size: 0.85rem;
+  color: #3b82f6;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.centerText {
+  text-align: center;
+}

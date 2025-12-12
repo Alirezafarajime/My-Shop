@@ -1,0 +1,117 @@
+.pageContainer {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: inherit;
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 32px;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userInfo {
+  text-align: right;
+}
+
+.userAvatar {
+  background-color: #3b82f6 !important;
+}
+
+.searchBar {
+  background-color: white;
+  border-radius: 16px;
+  width: 600px;
+}
+
+.searchInput fieldset {
+  border: none;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.titleIcon {
+  font-size: 30px !important;
+}
+
+.btnAdd {
+  background-color: #3b82f6 !important;
+  border-radius: 12px !important;
+  padding: 8px 22px !important;
+  font-family: inherit !important;
+}
+
+.btnAdd:hover {
+  background-color: #235dda !important;
+}
+
+.tableContainer {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.tableHeader {
+  background-color: #eaecee;
+}
+
+.tableHeaderCell {
+  color: #5d6574 !important;
+  font-weight: bold !important;
+  border-bottom: none !important;
+  padding: 20px !important;
+  font-family: inherit !important;
+}
+
+.tableRow {
+  transition: 0.3s;
+}
+
+.tableRow:hover {
+  background-color: #f9fafb;
+}
+
+.tableCell {
+  border-bottom: 2px solid #e7eaef !important;
+  padding: 20px !important;
+  color: #353f4f;
+  font-family: inherit !important;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.emptyRow {
+  text-align: center !important;
+  padding: 40px !important;
+  color: #686e7a;
+  font-size: 1.5rem;
+  width: 100%;
+  display: table-cell;
+}

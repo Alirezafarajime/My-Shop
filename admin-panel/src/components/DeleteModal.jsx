@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Dialog, Button, Typography, Box } from '@mui/material';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';

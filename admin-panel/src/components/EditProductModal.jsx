@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
@@ -36,7 +37,7 @@ const EditProductModal = ({ open, handleClose, productToEdit }) => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:3000/products/${productToEdit.id}`,
+        `http://localhost:3001/products/${productToEdit.id}`,
         {
           name: formData.name,
           price: Number(formData.price),

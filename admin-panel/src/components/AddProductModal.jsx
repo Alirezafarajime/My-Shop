@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from "react";
 import axios from "axios";
 import {
@@ -32,7 +33,7 @@ const AddProductModal = ({ open, handleClose }) => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:3000/products",
+        "http://localhost:3001/products",
         {
           name: formData.name,
           price: Number(formData.price),

@@ -1,9 +1,13 @@
+'use client';
 import React, { useState } from "react";
 import axios from "axios";
 import { TextField, Button, Link } from "@mui/material";
+import { useRouter } from "next/navigation";
 import styles from "./Auth.module.css";
-import Mylogo from "./images/union.png"; 
-const RegisterForm = ({ onSwitchToLogin }) => {
+<img src="/images/union.png" alt="لوگو" className={styles.logo} />
+
+const RegisterForm = () => {
+  const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -16,13 +20,13 @@ const RegisterForm = ({ onSwitchToLogin }) => {
     }
 
     try {
-      await axios.post("http://localhost:3000/auth/register", {
+      await axios.post("http://localhost:3001/auth/register", {
         username,
         password,
       });
 
       alert("ثبت‌نام با موفقیت انجام شد! حالا وارد شوید.");
-      onSwitchToLogin();
+      router.push("/login");
     } catch (err) {
       console.error(err);
 
@@ -34,7 +38,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
     <div className={styles.pageContainer} dir="rtl">
       <div className={styles.headerText}>بوت کمپ بوتواستارت</div>
       <form onSubmit={handleRegister} className={styles.card}>
-     <img src={Mylogo} alt="لوگو" className={styles.logo} />
+   <img src="/images/union.png" alt="لوگو" className={styles.logo} />
         <div className={styles.title}>فرم ثبت نام</div>
 
         <TextField
@@ -79,7 +83,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
           <Link
             component="button"
             type="button"
-            onClick={onSwitchToLogin}
+            onClick={() => router.push("/login")}
             className={styles.linkText}
           >
             حساب کاربری دارید؟ ورود

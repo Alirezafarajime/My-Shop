@@ -1,5 +1,7 @@
+'use client';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import {
   Button,
   Typography,
@@ -28,6 +30,7 @@ import DeleteModal from "../components/DeleteModal";
 import EditProductModal from "../components/EditProductModal";
 
 const ProductsPage = () => {
+  const router = useRouter();
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [username, setUsername] = useState("کاربر");
@@ -44,7 +47,7 @@ const ProductsPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:3000/products?limit=1000",
+        "http://localhost:3001/products?limit=1000",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -63,9 +66,14 @@ const ProductsPage = () => {
   };
 
   useEffect(() => {
-    fetchProducts();
-    const savedName = localStorage.getItem("username");
-    if (savedName) setUsername(savedName);
+    const token = localStorage.getItem("token");
+    if (!token) {
+      router.push("/login");
+    } else {
+      fetchProducts();
+      const savedName = localStorage.getItem("username");
+      if (savedName) setUsername(savedName);
+    }
   }, []);
 
   const openDeleteModal = (product) => {
@@ -77,7 +85,7 @@ const ProductsPage = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:3000/products/${productToDelete.id}`,
+        `http://localhost:3001/products/${productToDelete.id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -97,7 +105,7 @@ const ProductsPage = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
-    window.location.reload();
+    router.push("/login");
   };
 
   const filteredProducts = Array.isArray(products)

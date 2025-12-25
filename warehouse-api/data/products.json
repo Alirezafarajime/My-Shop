@@ -3,19 +3,19 @@
     "id": "45195ad1-ab6f-44b6-b78a-7ad737dab8b6",
     "name": "توپ",
     "price": 600000,
-    "quantity": 89
+    "quantity": 100
   },
   {
     "id": "c5109abb-df43-43df-b654-c21e404b725f",
     "name": "شلوار",
-    "price": 900000,
-    "quantity": 65
+    "price": 100000,
+    "quantity": 75
   },
   {
     "id": "ba413065-541e-463e-88d3-b7c5e9ebea32",
     "name": "کفش",
     "price": 2000000,
-    "quantity": 180
+    "quantity": 182
   },
   {
     "id": "86666eeb-dcfb-4223-b934-a765c29d01a8",
